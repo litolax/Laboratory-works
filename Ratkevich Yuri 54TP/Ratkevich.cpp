@@ -2,7 +2,6 @@
 #include <math.h>
 #include <conio.h>
 #include <iostream>
-#include <windows.h>
 
 
 void FirstTest()
@@ -69,8 +68,6 @@ void FifthTest()
 
 int main()
 {
-    SetConsoleOutputCP(866);
-    SetConsoleCP(866);
 	setlocale(LC_ALL, "ru");
 	FirstTest();
 	SecondTest();
