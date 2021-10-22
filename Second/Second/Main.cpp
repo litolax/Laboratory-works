@@ -8,8 +8,8 @@ void ExerciseFirstNumber1()
 	int a, b;
 	cout << "Введите a и б: " << endl;
 	cin >> a >> b;
-	if (a > b) cout << a;
-	else cout << b;
+	if (a > b) cout << a << endl;
+	else cout << b << endl;
 }
 
 void ExerciseFirstNumber2()
@@ -19,7 +19,7 @@ void ExerciseFirstNumber2()
 	cin >> n1 >> n2 >> n3;
 	if (n1 < n2) n1 = n2;
 	if (n1 < n3) n1 = n3;
-	cout << n1;
+	cout << n1 << endl;
 
 }
 
@@ -101,7 +101,7 @@ void ExerciseSecondNumber1()
 	cin >> c;
 	discriminant = pow(b, 2) - 4 * a * c;
 	if (discriminant < 0) cout << "Корней нет." << endl;
-	if (discriminant == 0)
+	if (discriminant > 0)
 	{
 		cout << "Два корня:" << endl;
 		int x1 = (-b - sqrt(discriminant)) / (2 * a);
@@ -109,7 +109,7 @@ void ExerciseSecondNumber1()
 		cout << "x1 = " << x1 << endl;;
 		cout << "x2 = " << x2 << endl;
 	}
-	if (discriminant > 0)
+	if (discriminant == 0)
 	{
 		cout << "Один корень:" << endl;
 		int x1 = (-b - sqrt(discriminant)) / (2 * a);
@@ -149,6 +149,11 @@ void ExerciseSecondNumber3()
 	if (n > 100 || n < 0)
 	{
 		cout << "Вы ввели неправильное число." << endl;
+		return;
+	}
+	if (n >= 5 && n <= 20)
+	{
+		cout << "На лугу пасётся " << n << " коров" << endl;
 		return;
 	}
 	switch (n%10)
@@ -209,11 +214,36 @@ void ExerciseSecondNumber4()
 
 }
 
+void ExerciseSecondNumber5()
+{
+	int a, b, c;
+	cout << "Введите a: " << endl;
+	cin >> a;
+	cout << "Введите b: " << endl;
+	cin >> b;
+	cout << "Введите c: " << endl;
+	cin >> c;
+	bool isEven = false, isNotEven = false;
+	if (a % 2 == 0 || b % 2 == 0 || c % 2 == 0) isEven = true;
+	if (a % 2 != 0 || b % 2 != 0 || c % 2 != 0) isNotEven = true;
+	if (isEven && isNotEven) cout << "YES" << endl;
+	else cout << "NO" << endl;
+}
+
 
 int main()
 {
 	setlocale(LC_ALL, "ru");
+	ExerciseFirstNumber1();
+	ExerciseFirstNumber2();
+	ExerciseFirstNumber3();
+	ExerciseFirstNumber4();
+	ExerciseFirstNumber5();
+	ExerciseSecondNumber1();
+	ExerciseSecondNumber2();
+	ExerciseSecondNumber3();
 	ExerciseSecondNumber4();
+	ExerciseSecondNumber5();
 	system("pause");
 	return 1;
 }
