@@ -58,6 +58,7 @@ void Second()
 }
 
 int main() {
+    setlocale(LC_ALL, "en_US.UTF8");
     First();
     Second();
     return 0;
