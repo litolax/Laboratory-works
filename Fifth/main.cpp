@@ -13,7 +13,7 @@ void First()
     cout << "Введите h: " << endl;
     cin >> h;
     int index = 0;
-    min = max = a;
+    min = max = y;
     x = a;
     for (x; x <= b;)
     {
