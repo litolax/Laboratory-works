@@ -32,7 +32,7 @@ void First()
 
 void Second()
 {
-    double y(0), x(0), a, b, h, pi = 3.1415, min, max, temp;
+    double y(0), x, a, b, h, pi = 3.1415, min, max, temp;
     cout << "Введите a: " << endl;
     cin >> a;
     cout << "Введите b: " << endl;
@@ -40,9 +40,9 @@ void Second()
     cout << "Введите h: " << endl;
     cin >> h;
     int index = 0;
-    min = max = a;
+    min = max = y;
     x = a;
-    for (x; x <= b;)
+    for  (;x <= b;)
     {
         temp = y;
         y = ((1 - (pow(x, 2) / 4)) * cos(x) - ((x/2)*sin(x)));
