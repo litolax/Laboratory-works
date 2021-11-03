@@ -9,14 +9,14 @@ void First(double a, double b, double z, double e)
 	int operationType = 0;
 	if (z < -1) x = -z / 3;
 	else if (z >= -1) x = fabs(z);
-	cout << "Âûáåðèòå çíà÷åíèå ôóíêöèè 1 - 2x; 2 - x^2; 3 - x/3" << endl;
+	cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸ 1 - 2x; 2 - x^2; 3 - x/3" << endl;
 	cin >> operationType;
 	switch (operationType)
 	{
 	case 1: fi = 2 * x; break;
 	case 2: fi = pow(x, 2); break;
 	case 3: fi = x / 3; break;
-	default: cout << "Îøèáêà"; return; break;
+	default: cout << "ÐžÑˆÐ¸Ð±ÐºÐ°"; return; break;
 	}
 	y = a * fi - log(x + 2.5) + b * (pow(e, x) - pow(e, 1 / x));
 	cout << "y = " << y << endl;
@@ -29,14 +29,14 @@ void Second(double a, double b, double z, double e)
 	int operationType = 0;
 	if (z > 0) x = -3 * z;
 	else if (z <= 0) x = pow(z, 2);
-	cout << "Âûáåðèòå çíà÷åíèå ôóíêöèè 1 - 2x; 2 - x^2; 3 - x/3" << endl;
+	cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸ 1 - 2x; 2 - x^2; 3 - x/3" << endl;
 	cin >> operationType;
 	switch (operationType)
 	{
 	case 1: fi = 2 * x; break;
 	case 2: fi = pow(x, 2); break;
 	case 3: fi = x / 3; break;
-	default: cout << "Îøèáêà"; return; break;
+	default: cout << "ÐžÑˆÐ¸Ð±ÐºÐ°"; return; break;
 	}
 	y = 2 * fi * (a * sin(x) + b * pow(e, -(x + 3)));
 	cout << "y2 = " << y << endl;
@@ -48,11 +48,11 @@ int main()
 	double x, y, z, fi, a, b;
 	int operationType = 0;
 	const double e = 2.7182818284590;
-	cout << "Ââåäèòå a: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ a: " << endl;
 	cin >> a;
-	cout << "Ââåäèòå b: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ b: " << endl;
 	cin >> b;
-	cout << "Ââåäèòå z: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ z: " << endl;
 	cin >> z;
 	First(a, b, z, e);
 	Second(a, b, z, e);

@@ -6,9 +6,9 @@ using namespace std;
 void First()
 {
 	int n, k;
-	cout << "Ââåäèòå ÷èñëî N: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ N: " << endl;
 	cin >> n;
-	cout << "Ââåäèòå ÷èñëî K: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ K: " << endl;
 	cin >> k;
 	if (n < 0 || n > 1000 || k < 0 || k < n || k > 1000) return;
 	for (; n <= k; n++) if (n % 3 == 0 && n % 5 != 0) cout << n << " " << endl;
@@ -17,7 +17,7 @@ void First()
 void Second()
 {
 	int n = 0, count = 0, sum = 0, first = 0;
-	cout << "Ââåäèòå ÷èñëî N: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ N: " << endl;
 	cin >> n;
 	first = n % 10;
 	while (n > 0)
@@ -27,9 +27,9 @@ void Second()
 		sum += first;
 		n = n / 10;
 	}
-	cout << "Ïåðâàÿ öèôðà ÷èñëà N = " << first << endl;
-	cout << "Êîëè÷åñòâî öèôð â ÷èñëå N = " << count << endl;
-	cout << "Ñóììà öèôð ÷èñëà N = " << sum << endl;
+	cout << "ÐŸÐµÑ€Ð²Ð°Ñ Ñ†Ð¸Ñ„Ñ€Ð° Ñ‡Ð¸ÑÐ»Ð° N = " << first << endl;
+	cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ†Ð¸Ñ„Ñ€ Ð² Ñ‡Ð¸ÑÐ»Ðµ N = " << count << endl;
+	cout << "Ð¡ÑƒÐ¼Ð¼Ð° Ñ†Ð¸Ñ„Ñ€ Ñ‡Ð¸ÑÐ»Ð° N = " << sum << endl;
 }
 
 void Third()
@@ -40,9 +40,9 @@ void Third()
 void Fourth()
 {
 	int a = 0, b = 0;
-	cout << "Ââåäèòå a: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ a: " << endl;
 	cin >> a;
-	cout << "Ââåäèòå b: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ b: " << endl;
 	cin >> b;
 	if (a < 1000 || a > 9999 || b < 1000 || b > 9999) return;
 	for (; a <= b; a++)
@@ -57,11 +57,12 @@ void Fourth()
 
 int main()
 {
-	setlocale(LC_ALL, "ru");
-	First();
-	Second();
-	Third();
-    Fourth();
+	setlocale(LC_ALL, "en_US.UTF-8");
+	//First();
+	//Second();
+	//Third();
+    //Fourth();
+	for (int i = 10; i < 100; i++) if (i == (2 * ((i % 10) * ((i / 10))))) cout << i << " " << endl;
 	system("pause");
 	return 1;
 }
