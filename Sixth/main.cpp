@@ -2,8 +2,9 @@
 #include <iostream>
 using namespace std;
 
-void First()
-{
+
+int main() {
+    setlocale(LC_ALL, "en_US.UTF8");
     srand( time( 0 ) ); // автоматическая рандомизация
     int min = -3, max = 20, c = 0, firstSum = 0, firstCount = 0;
     int arr[20];
@@ -27,13 +28,6 @@ void First()
     }
     cout << "Количество эллементов > C = " << firstCount << endl;
     cout << "Сумма = " << firstSum << endl;
-}
-
-
-int main() {
-    setlocale(LC_ALL, "en_US.UTF8");
-    srand( time( 0 ) ); // автоматическая рандомизация
-    First();
     system("pause");
     return 0;
 }
