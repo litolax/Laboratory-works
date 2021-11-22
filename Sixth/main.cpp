@@ -105,7 +105,7 @@ void FirstF(const int arr[])
     for (int i = 0; i < firstMaxElementIndex; i++) {
         sum += arr[i];
     }
-    cout << firstMaxElementIndex << endl << endl;
+
     cout << "Сумма положительных элементов массива, расположенных до (первого) максимального элемента = " << sum << endl << endl;
 }
 
@@ -113,12 +113,17 @@ void Second()
 {
     cout << "Задание №2" << endl;
     int arr[10]{1,2,3,4,5,5,7,3,2,1};
+    for (int i = 0; i < 10; ++i) {
+        cout << "Введите число массива под индексом: [" << i << "]: " << endl;
+        cin >> arr[i];
+    }
+    cout << endl;
     bool isPalindrom = true;
     for (int i = 0; i < 10; i++) {
         if (arr[i] != arr[9-i]) isPalindrom = false;
     }
-    if (isPalindrom) cout << "Данный массив является палиндромом" << endl;
-    else cout << "Данный массив не является палиндромом" << endl;
+    if (isPalindrom) cout << "Данный массив является палиндромом" << endl << endl;
+    else cout << "Данный массив не является палиндромом" << endl << endl;
 }
 
 void Third()
@@ -141,14 +146,14 @@ void Third()
             maxOfArr = arr3[i];
             minOfArr = arr3[i];
         }
-        if (maxOfArr > arr3[i]) maxOfArr = arr3[i];
-        if (minOfArr < arr3[i]) minOfArr = arr3[i];
+        if (maxOfArr < arr3[i]) maxOfArr = arr3[i];
+        if (minOfArr > arr3[i]) minOfArr = arr3[i];
         sum += arr3[i];
     }
     avarageArithmetic = sum / 20;
     cout << "Среднее арифметическое третьего массива = " << avarageArithmetic << endl;
     cout << "Максимальное третьего массива = " << maxOfArr << endl;
-    cout << "Минимальное третьего массива = " << minOfArr << endl;
+    cout << "Минимальное третьего массива = " << minOfArr << endl << endl;
 }
 
 void Fourth()
@@ -182,7 +187,7 @@ void Fourth()
 
     cout << "Новый массив" << endl;
     for (int i = 0; i < size2; i++) {
-        cout << "Элемент ["<< i << "] = " << arr2[i] << endl;
+        cout << "Элемент ["<< i << "] = " << arr2[i] << endl << endl;
     }
     delete[] arr2;
     arr2 = nullptr;
@@ -216,22 +221,22 @@ void Fifth()
 
     delete[] arr2;
     arr2 = nullptr;
+    cout << endl;
 }
 
 int main() {
     setlocale(LC_ALL, "en_US.UTF8");
     srand( time( 0 ) ); // автоматическая рандомизация
     int min = 0, max = 0;
-    int arr[20]{10,-2,3,9,7,6,2,-10,9,10,4,-5,3,-4,-3,-2,3,4,8,8};
-//    int arr[20];
-//    cout << "Введите минимальную границу значений массива: " << endl;
-//    cin >> min;
-//    cout << "Введите максимальную границу массива: " << endl;
-//    cin >> max;
-//    for (int i = 0; i < 20; i++) {
-//        arr[i] = min + rand() % (max-min+1);
-//       cout << "Элемент ["<< i << "] = " << arr[i] << endl << endl;
-//    }
+    int arr[20];
+    cout << "Введите минимальную границу значений массива: " << endl;
+    cin >> min;
+    cout << "Введите максимальную границу массива: " << endl;
+    cin >> max;
+    for (int i = 0; i < 20; i++) {
+        arr[i] = min + rand() % (max-min+1);
+       cout << "Элемент ["<< i << "] = " << arr[i] << endl << endl;
+    }
 
 
     FirstA(arr);
@@ -240,10 +245,10 @@ int main() {
     FirstD(arr);
     FirstE(arr);
     FirstF(arr);
-//    Second();
-//    Third();
-//    Fourth();
-//    Fifth();
+    Second();
+    Third();
+    Fourth();
+    Fifth();
     system("pause");
     return 0;
 }
