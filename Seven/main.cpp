@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 
@@ -42,25 +43,49 @@ void Second(int arr[7][7])
     }
 }
 
-//void Third(int arr[7][7])
-//{
-//    for(int i=0;i<7;i++)  //меняем местами максимальный и минимальный элемент массива
-//    {
-//        for (int j = 0; j < 7; j++) {
-//
-//            if (arr[i][j] == 0) arr[i][j] = 6;
-//            else if (arr[i][j] == 6) arr[i][j] = 0;
-//        }
-//
-//    }
-//    for (int i = 0; i < 7; i++) {
-//        for (int j = 0; j < 7; j++) {
-//            cout << arr[i][j] << "\t";
-//        }
-//        cout << endl;
-//        }
-//
-//}
+void Third(int arr[7][7])
+{
+    int sum = 0;
+    for (int i=0;i<7;i++)
+    {
+        for (int j = 0; j < 7; j++) {
+            if (i + j < 7 - 1) {
+                sum += fabs(arr[i][j]);
+            }
+        }
+    }
+
+    cout << "Сумма модулей элементов, расположенных выше побочной диагонали = " << sum << endl << endl;
+}
+
+void Fourth(int arr[7][7])
+{
+    int arifmet[7];
+    int sum = 0, count = 0;
+    for (int i = 0; i < 7; i++) {
+        for (int j = 0; j < 7; j++) {
+            sum += arr[i][j];
+            count++;
+        }
+        arifmet[i] = sum / count;
+        sum = 0;
+        count = 0;
+    }
+    for (int i = 0; i < 7; i++) {
+        for (int j = 0; j < 7; j++) {
+            if (arr[i][j] == 0) arr[i][j] = arifmet[i];
+        }
+    }
+    for (int i = 0; i < 7; i++) {
+        for (int j = 0; j < 7; j++) {
+            cout << arr[i][j] << "\t";
+        }
+        cout << endl;
+    }
+
+    cout << endl << endl;
+
+}
 
 int main() {
     setlocale(LC_ALL, "en_US.UTF8");
@@ -87,5 +112,7 @@ int main() {
 
 //    First(arr);
     Second(arr);
+//    Third(arr);
+//    Fourth(arr);
     return 0;
 }
