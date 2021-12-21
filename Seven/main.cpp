@@ -5,6 +5,7 @@ using namespace std;
 
 void First(int arr[7][7])
 {
+    cout << "Задание 1" << endl;
     int count = 0;
     for (int i = 0; i < 7; i++) {
         for (int j = 0; j < 7; j++) {
@@ -19,6 +20,7 @@ void First(int arr[7][7])
 
 void Second(int arr[7][7])
 {
+    cout << "Задание 2" << endl;
     int min = arr[0][0], max = arr[0][0];
     for (int i=0;i<7;i++)
     {
@@ -45,6 +47,7 @@ void Second(int arr[7][7])
 
 void Third(int arr[7][7])
 {
+    cout << "Задание 3" << endl;
     int sum = 0;
     for (int i=0;i<7;i++)
     {
@@ -60,6 +63,7 @@ void Third(int arr[7][7])
 
 void Fourth(int arr[7][7])
 {
+    cout << "Задание 4" << endl;
     int arifmet[7];
     int sum = 0, count = 0;
     for (int i = 0; i < 7; i++) {
@@ -87,20 +91,37 @@ void Fourth(int arr[7][7])
 
 }
 
+//void Fifth()
+//{
+//    int height = 0, width = 0, countEl = 0, max = 5, min = -5;
+//    cout << "Введите количество строк массива: " << endl;
+//    cin >> width;
+//    cout << "Введите количество столбцов массива: " << endl;
+//    cin >> height;
+//    int **array = new int* [width];
+//    for (int count = 0; count < width; count++)
+//        array[count] = new int [height];
+//
+//    for (int i = 0; i < 7; i++) {
+//        for (int j = 0; j < 7; j++) {
+//            array[i][j] = min + rand() % (max-min+1);
+//            cout << array[i][j] << "\t";
+//        }
+//        cout << endl;
+//    }
+//
+//
+//
+//
+//    for (int count = 0; count < width; count++)
+//        delete []array[count];
+//}
+
 int main() {
     setlocale(LC_ALL, "en_US.UTF8");
     srand( time( 0 ) ); // автоматическая рандомизация
     int min = -10, max = 10;
     int arr[7][7];
-//    {
-//        {2,1,1,2,3,4,5},
-//        {1,1,1,2,3,4,5},
-//        {1,1,1,2,3,4,5},
-//        {1,1,1,0,3,4,5},
-//        {1,1,1,2,3,4,5},
-//        {1,1,1,6,3,4,5},
-//        {1,1,1,2,3,4,5},
-//    };
     for (int i = 0; i < 7; i++) {
         for (int j = 0; j < 7; j++) {
             arr[i][j] = min + rand() % (max-min+1);
@@ -110,9 +131,11 @@ int main() {
     }
     cout << endl << endl;
 
-//    First(arr);
+    First(arr);
     Second(arr);
-//    Third(arr);
-//    Fourth(arr);
+    Third(arr);
+    Fourth(arr);
+//    Fifth();
+    system("pause");
     return 0;
 }
