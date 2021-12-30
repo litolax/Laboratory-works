@@ -10,6 +10,15 @@ void First()
     int count = 0;
     int finder = s[1];
 
+    cout << "Исходный первый массив: " << endl;
+    for (int i = 0; i < 10; i++) {
+        cout << "Элемент [" << i << "] = " << f[i] << endl;
+    }
+    cout << "Исходный второй массив: " << endl;
+    for (int i = 0; i < 10; i++) {
+        cout << "Элемент [" << i << "] = " << s[i] << endl;
+    }
+
     for (int i = 0; i < 10; i++) if (f[i] == finder) count++;
 
     cout << "Элемент [" << finder << "] встречается " << count << " раз" << endl;
@@ -56,7 +65,7 @@ void Second()
 }
 
 int main() {
-
+    setlocale(LC_ALL, "en_US.UTF8");
     First();
     Second();
     system("pause");
